@@ -1,0 +1,10 @@
+apiVersion: v1
+metadata:
+  name: nas-csi-pvc
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: alicloud-nas-subpath
+  resources:
+    requests:
+      storage: 10Gi
