@@ -14,13 +14,16 @@ spec:
 
 ---
 kind: StatefulSet
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 metadata:
   name: csi-provisioner
   namespace: kube-system
 spec:
   serviceName: "csi-provisioner"
   replicas: 1
+  selector:
+    matchLabels:
+      app: csi-provisioner
   template:
     metadata:
       labels:

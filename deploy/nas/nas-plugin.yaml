@@ -7,7 +7,7 @@ spec:
 ---
 # This YAML defines all API objects to create RBAC roles for csi node plugin.
 kind: DaemonSet
-apiVersion: apps/v1beta2
+apiVersion: apps/v1
 metadata:
   name: csi-nasplugin
   namespace: kube-system
@@ -88,5 +88,3 @@ spec:
       - name: etc
         hostPath:
           path: /etc
-  updateStrategy:
-    type: RollingUpdate
